@@ -1,8 +1,7 @@
 "use client";
 import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk"
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { gql, ApolloClient, InMemoryCache, ApolloProvider, useQuery } from "@apollo/client";
-import SplashCursor from "./components/SplashCursor";
 
 // You can use AptosConfig to choose which network to connect to
 const config = new AptosConfig({ network: Network.TESTNET });
@@ -497,8 +496,6 @@ export default function Home() {
 
   return (
     <ApolloProvider client={client}>
-      {/* <SplashCursor></SplashCursor> */}
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
